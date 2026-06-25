@@ -1,5 +1,4 @@
-# G-SITM-Tool
-# G-SITM-Rec — First Prototype
+# G-SITM-Tool - First Prototype
 
 This repository contains a first implementable prototype for a **G-SITM-based museum recommendation system**.
 
