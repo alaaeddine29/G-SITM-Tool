@@ -1,0 +1,11 @@
+poi_id,label,theme,tags,space_id,importance
+P1,Greek Vase,archaeology,archaeology;ceramics;ancient,R2,0.90
+P2,Roman Amphora,archaeology,archaeology;ceramics;roman,R2,0.82
+P3,Marble Statue,sculpture,sculpture;ancient;roman,R3,0.88
+P4,Greek Coin Collection,archaeology,archaeology;coins;trade,R4,0.86
+P5,Byzantine Icon,religion,religion;byzantine;iconography,R5,0.78
+P6,Trade Routes Map,history,history;trade;ancient,R4,0.75
+P7,Modern Painting,painting,painting;modern;color,R6,0.72
+P8,Small Bronze Sculpture,sculpture,sculpture;bronze;ancient,R3,0.70
+P9,Religious Manuscript,religion,religion;manuscript;byzantine,R5,0.76
+P10,Abstract Composition,painting,painting;modern;abstract,R6,0.68

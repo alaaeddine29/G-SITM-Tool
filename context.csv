@@ -1,0 +1,5 @@
+visitor_id,time,space_id,poi_id,dwell_time_seconds,event_type
+V1,2026-06-25T10:00:00,R1,,30,move
+V1,2026-06-25T10:03:00,R2,P1,180,stop
+V1,2026-06-25T10:08:00,R2,P2,130,stop
+V1,2026-06-25T10:12:00,C1,,20,move
