@@ -1,0 +1,11 @@
+space_id,label,space_type,floor,capacity
+R1,Entrance Hall,room,0,40
+R2,Ancient Ceramics Gallery,gallery,0,35
+R3,Sculpture Gallery,gallery,0,30
+R4,Coins and Trade Gallery,gallery,0,25
+R5,Byzantine Icons Gallery,gallery,0,25
+R6,Modern Art Gallery,gallery,0,30
+C1,Main Corridor,corridor,0,20
+C2,Quiet Corridor,corridor,0,15
+C3,Side Passage,corridor,0,10
+S1,Staircase,stair,0,8
