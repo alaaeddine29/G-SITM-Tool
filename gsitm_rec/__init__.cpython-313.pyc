@@ -1,0 +1,60 @@
+"""Simple graph visualization for the G-SITM recommendation prototype."""
+
+from __future__ import annotations
+
+from pathlib import Path
+from typing import Iterable, Optional
+
+import matplotlib.pyplot as plt
+import networkx as nx
+
+from .recommender import GSITMRecommender, POIRecommendation
+
+
+def draw_recommendation(
+    recommender: GSITMRecommender,
+    recommendation: POIRecommendation,
+    output_path: str | Path,
+) -> Path:
+    """Draw the museum spatial graph and highlight the recommended path.
+
+    The figure is intentionally simple: it is meant for debugging, papers,
+    and early prototype demonstrations, not for final museum navigation.
+    """
+    output_path = Path(output_path)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+
+    g = recommender._space_subgraph()
+    pos = nx.spring_layout(g, seed=7)
+
+    crowd_path_edges = set()
+    if recommendation.crowd_aware_path:
+        path = recommendation.crowd_aware_path.path
+        crowd_path_edges = {frozenset((a, b)) for a, b in zip(path[:-1], path[1:])}
+
+    node_sizes = []
+    node_labels = {}
+    for node, attrs in g.nodes(data=True):
+        node_labels[node] = node
+        node_sizes.append(900 if node == recommendation.poi_space_id else 600)
+
+    edge_widths = []
+    edge_labels = {}
+    for a, b, attrs in g.edges(data=True):
+        edge_widths.append(3.0 if frozenset((a, b)) in crowd_path_edges else 1.0)
+        edge_labels[(a, b)] = f"{attrs.get('distance', '')}m\n{attrs.get('crowd_level', '')}"
+
+    plt.figure(figsize=(10, 7))
+    nx.draw_networkx_nodes(g, pos, node_size=node_sizes)
+    nx.draw_networkx_edges(g, pos, width=edge_widths)
+    nx.draw_networkx_labels(g, pos, labels=node_labels, font_size=9)
+    nx.draw_networkx_edge_labels(g, pos, edge_labels=edge_labels, font_size=7)
+
+    plt.title(
+        f"G-SITM-Rec: path to {recommendation.poi_label} ({recommendation.poi_space_id})"
+    )
+    plt.axis("off")
+    plt.tight_layout()
+    plt.savefig(output_path, dpi=200)
+    plt.close()
+    return output_path
