@@ -1,0 +1,137 @@
+[
+  {
+    "poi_id": "P4",
+    "poi_label": "Greek Coin Collection",
+    "poi_theme": "archaeology",
+    "poi_space": {
+      "id": "R4",
+      "label": "Coins and Trade Gallery"
+    },
+    "score": 0.365,
+    "score_components": {
+      "semantic_relevance": 0.5,
+      "importance": 0.86,
+      "distance_cost": 0.5,
+      "crowd_cost": 0.0
+    },
+    "shortest_path": {
+      "path_type": "shortest",
+      "path": [
+        "C1",
+        "R2",
+        "R4"
+      ],
+      "cost": 30.0,
+      "distance": 30.0,
+      "crowd_cost": 2.0
+    },
+    "crowd_aware_path": {
+      "path_type": "crowd_aware",
+      "path": [
+        "C1",
+        "R2",
+        "C2",
+        "R4"
+      ],
+      "cost": 52.0,
+      "distance": 34.0,
+      "crowd_cost": 1.5
+    },
+    "explanation": [
+      "The visitor's dominant inferred interests are archaeology, ceramics, ancient.",
+      "The POI shares semantic tags with the visitor trajectory: archaeology, coins, trade.",
+      "The POI has curatorial importance 0.86.",
+      "The destination space is open with low crowd level.",
+      "The crowd-aware path differs from the shortest path because it penalizes congested passages."
+    ]
+  },
+  {
+    "poi_id": "P6",
+    "poi_label": "Trade Routes Map",
+    "poi_theme": "history",
+    "poi_space": {
+      "id": "R4",
+      "label": "Coins and Trade Gallery"
+    },
+    "score": 0.1778,
+    "score_components": {
+      "semantic_relevance": 0.1452,
+      "importance": 0.75,
+      "distance_cost": 0.5,
+      "crowd_cost": 0.0
+    },
+    "shortest_path": {
+      "path_type": "shortest",
+      "path": [
+        "C1",
+        "R2",
+        "R4"
+      ],
+      "cost": 30.0,
+      "distance": 30.0,
+      "crowd_cost": 2.0
+    },
+    "crowd_aware_path": {
+      "path_type": "crowd_aware",
+      "path": [
+        "C1",
+        "R2",
+        "C2",
+        "R4"
+      ],
+      "cost": 52.0,
+      "distance": 34.0,
+      "crowd_cost": 1.5
+    },
+    "explanation": [
+      "The visitor's dominant inferred interests are archaeology, ceramics, ancient.",
+      "The POI shares semantic tags with the visitor trajectory: ancient, history, trade.",
+      "The POI has curatorial importance 0.75.",
+      "The destination space is open with low crowd level.",
+      "The crowd-aware path differs from the shortest path because it penalizes congested passages."
+    ]
+  },
+  {
+    "poi_id": "P3",
+    "poi_label": "Marble Statue",
+    "poi_theme": "sculpture",
+    "poi_space": {
+      "id": "R3",
+      "label": "Sculpture Gallery"
+    },
+    "score": 0.1525,
+    "score_components": {
+      "semantic_relevance": 0.25,
+      "importance": 0.88,
+      "distance_cost": 0.2,
+      "crowd_cost": 1.0
+    },
+    "shortest_path": {
+      "path_type": "shortest",
+      "path": [
+        "C1",
+        "R3"
+      ],
+      "cost": 12.0,
+      "distance": 12.0,
+      "crowd_cost": 1.0
+    },
+    "crowd_aware_path": {
+      "path_type": "crowd_aware",
+      "path": [
+        "C1",
+        "R3"
+      ],
+      "cost": 24.0,
+      "distance": 12.0,
+      "crowd_cost": 1.0
+    },
+    "explanation": [
+      "The visitor's dominant inferred interests are archaeology, ceramics, ancient.",
+      "The POI shares semantic tags with the visitor trajectory: ancient, roman, sculpture.",
+      "The POI has curatorial importance 0.88.",
+      "The destination space is open with high crowd level.",
+      "The shortest path is also acceptable under the current crowd state."
+    ]
+  }
+]
